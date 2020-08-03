@@ -32,7 +32,7 @@ class Learner:
 
             with tqdm(train_loader,leave=True) as pbar:
                 for batch_idx, data in enumerate(pbar):
-                    optimizer.zero_grad()
+                    self.optimizer.zero_grad()
 
                     inputs_cpu, labels_cpu = data
 

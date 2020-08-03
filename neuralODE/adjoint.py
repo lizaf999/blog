@@ -91,8 +91,6 @@ class AdjointFunc(torch.autograd.Function):
         t0 = ctx.t0
         t1 = ctx.t1
         z1= ctx.saved_tensors[0]
-        theta = flat_parameters(func.parameters())
-        theta.requires_grad = True
 
         theta_list = list(func.parameters())
         
@@ -105,12 +103,12 @@ class AdjointFunc(torch.autograd.Function):
             z,a,dfdth_unused = x[0],x[1],x[2]
             z = torch.autograd.Variable(z.data,requires_grad=True)
             torch.set_grad_enabled(True)#important
-            f = func(z,t)
 
+            f = func(z,t)
             f.backward(a)
 
-            adfdz = z.grad#a is vector, dfdz is 2 rank tensor
-            #z.grad.zero_()#不要！！
+            adfdz = z.grad
+            #z.grad.zero_()#不要
 
             adfdth_list = []
             for theta_i in theta_list:
