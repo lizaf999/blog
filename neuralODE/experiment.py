@@ -80,6 +80,7 @@ def experiment():
     #train and evaluate
     learner.train(trainloader,5)
 
+    ##to save the learnt paramerters
     #PATH = "./trained"
     #torch.save(model.state_dict(), PATH)
     # model = Model()
