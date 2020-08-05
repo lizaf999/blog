@@ -5,6 +5,7 @@ NeurIPS 2018のBest PaperであるNeuralODEをフルスクラッチで実装し�
 - Python 3.8.2
 - Pytorch 1.5.0
 - CUDA 10.1
+
 で動作確認しています．PytorchやCUDAのバージョンを変えるとエラーを吐く可能性が高いです．
 
 ## Usage
