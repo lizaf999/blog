@@ -1,5 +1,5 @@
 # Neural Ordinary Differential Equations
-NeurIPS 2018のBest PaperであるNeuralODEをフルスクラッチで実装しました．コードの詳細は[Neural Ordinary Differential Equationsの実装]()に書いてあります．
+NeurIPS 2018のBest PaperであるNeuralODEをフルスクラッチで実装しました．コードの詳細は[Neural Ordinary Differential Equationsの実装](https://segfault11.hatenablog.jp/entry/2020/08/05/120556)に書いてあります．
 
 ## Requirement
 - Python 3.8.2
